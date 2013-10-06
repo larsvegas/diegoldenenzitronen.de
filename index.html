@@ -13,6 +13,7 @@
       width: 100%;
       height: 100%;
 //      min-height: 100px;
+      text-align: center;
     }
 
     #content {
@@ -23,7 +24,6 @@
       top: 0;
       background: #fff;
  //     width: 100%;
-      text-align: center;
  //     height: 100%;
       font: 10vw sans-serif;
       font-weight: bold;
@@ -48,7 +48,7 @@
 
       var txt = [
         'I\'M',
-        'STILL',
+/*        'STILL',
         'IN',
         'L♥VE',
         'WITH',
@@ -61,7 +61,7 @@
         'WILL',
         'BE',
         '!',
-        'LARSVEGAS',
+        'LARSVEGAS',*/
         'PLAY'
       ];
 
@@ -140,7 +140,7 @@
       }
 
       function setContent() {
-//        var video = '<iframe width="960" height="720" src="http://www.youtube-nocookie.com/embed/ecgmgcmlbV8?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+//        var video = '<iframe width="960" height="720" src="//www.youtube-nocookie.com/embed/ecgmgcmlbV8?autoplay=1" frameborder="0" allowfullscreen></iframe>';
 
 //        $('#content').html(video);
         $('#content').toggle();
@@ -152,13 +152,22 @@
   </script>
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
   <div id="wrapper">
   <section>
     <article>
       <div id="main">
         <h1>Die Goldenen Zitronen - Scheinwerfer und Lautsprecher</h1>
-        <iframe width="640" height="480" src="http://www.youtube-nocookie.com/embed/ecgmgcmlbV8?version=3&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
-        
+        <iframe width="640" height="480" src="//www.youtube-nocookie.com/embed/ecgmgcmlbV8?version=3&enablejsapi=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
         <!--
         <object width="960" height="720">
           <param name="movie" value="//www.youtube-nocookie.com/v/ecgmgcmlbV8?version=3&amp;hl=en_US"></param>
@@ -168,23 +177,42 @@
         </object>
         -->
       </div>
+      <div id="share">
+        <h2>Share... and tell people about this
+          site.
+        </h2>
+        <h3>...or meet your friends in real life, which is even more social.
+        </h3>
+        <a href="#" 
+          onclick="
+            window.open(
+              '//www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+              'facebook-share-dialog', 
+              'width=626,height=436'); 
+            return false;">
+        <img src="facebook-share.png" alt="Share on Facebook" height="30" widht="91"></a>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100" data-height="30" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>
+      </div>
     </article>
   </section>
   <section>
     <article>
       <div id="content"></div>
     </article>
-    </section>
+  </section>
+  <footer>
+  <a href="disclaimer.html">Impressum</a>
+  </footer>
   </div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-42483669-3', 'diegoldenenzitronen.de');
-  ga('send', 'pageview');
+    ga('create', 'UA-42483669-3', 'diegoldenenzitronen.de');
+    ga('send', 'pageview');
 
-</script>
+  </script>
 </body>
 </html>
